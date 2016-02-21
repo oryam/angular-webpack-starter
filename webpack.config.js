@@ -101,6 +101,16 @@ module.exports = {
       poll: 1000,
     },
   },
+  
+  // we need this due to problems with es6-shim
+  node: {
+    global: 'window',
+    progress: false,
+    crypto: 'empty',
+    module: false,
+    clearImmediate: false,
+    setImmediate: false
+  },
 };
 
 // Helper functions

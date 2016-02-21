@@ -38,6 +38,7 @@ npm start
 - Install gulp
 - Install karma
 - Install protractor
+- Install http-server `npm install http-server -g`
 
 Then
 ```
@@ -54,6 +55,8 @@ npm install babel-loader babel-core babel-preset-es2015 --save-dev
 npm install angular --save
 npm install html-webpack-plugin@2 --save-dev
 npm install copy-webpack-plugin --save-dev
+npm install compression-webpack-plugin --save-dev
+npm install webpack-md5-hash --save-dev
 ```
 
 For es6 support, add `.babelrc`
