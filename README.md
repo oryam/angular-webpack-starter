@@ -52,11 +52,21 @@ npm init
 npm install webpack --save-dev
 npm install webpack-dev-server --save-dev
 npm install babel-loader babel-core babel-preset-es2015 --save-dev
-npm install angular --save
+
+npm install raw-loader --save-dev
+npm install json-loader --save-dev
+npm install style-loader --save-dev
+npm install css-loader --save-dev
+npm install sass-loader --save-dev
+npm install node-sass --save-dev
+
 npm install html-webpack-plugin@2 --save-dev
 npm install copy-webpack-plugin --save-dev
 npm install compression-webpack-plugin --save-dev
 npm install webpack-md5-hash --save-dev
+
+npm install angular --save
+npm install angular-ui-router --save
 ```
 
 For es6 support, add `.babelrc`

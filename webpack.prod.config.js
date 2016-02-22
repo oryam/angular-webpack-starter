@@ -67,13 +67,36 @@ module.exports = {
     ],
 
     loaders: [
-      //{ test: /\.json$/, loader: 'json-loader' },
-
       // transpiling JavaScript files using Babel
       {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+      },
+      
+      // Support for *.json files.
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+      },
+
+      // Support for CSS as raw text
+      {
+        test: /\.css$/,
+        loader: 'style!css',
+      },
+      // Support for SASS
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass-loader',
+        exclude: /node_modules/,
+      },
+
+      // support for .html as raw text
+      {
+        test: /\.html$/,
+        loader: 'raw-loader',
+        exclude: [root('src/index.html')],
       },
     ],
   },
@@ -159,5 +182,5 @@ function prepend(extensions, args) {
 }
 
 function gzipMaxLevel(buffer, callback) {
-  return zlib['gzip'](buffer, {level: 9}, callback)
+  return zlib['gzip'](buffer, { level: 9 }, callback)
 }
