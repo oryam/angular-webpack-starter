@@ -1,6 +1,6 @@
 export default class AppHelloController {
   constructor() {
-    this.name = 'Hello component';
+    this.name = 'hello component';
     this.directors = [
       {
         id: 1,
