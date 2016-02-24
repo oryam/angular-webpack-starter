@@ -70,6 +70,13 @@ module.exports = {
         loader: 'json-loader',
       },
 
+      // support for .html as raw text
+      {
+        test: /\.html$/,
+        loader: 'raw-loader',
+        exclude: [root('src/index.html')],
+      },
+
       // Support for CSS as raw text
       {
         test: /\.css$/,
@@ -81,12 +88,27 @@ module.exports = {
         loader: 'style!css!sass-loader',
         exclude: /node_modules/,
       },
-
-      // support for .html as raw text
+      
+      // Resources
       {
-        test: /\.html$/,
-        loader: 'raw-loader',
-        exclude: [root('src/index.html')],
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url',
+      },
+      {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?mimetype=application/font-woff&prefix=fonts',
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?mimetype=application/octet-stream&prefix=fonts',
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?mimetype=application/vnd.ms-fontobject&prefix=fonts',
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?mimetype=image/svg+xml&prefix=fonts',
       },
     ],
   },

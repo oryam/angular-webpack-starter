@@ -41,12 +41,20 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1",
     "webpack-md5-hash": "0.0.5"
   },
   "dependencies": {
     "angular": "^1.5.0",
-    "angular-ui-router": "^0.2.18"
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-material": "^1.0.5",
+    "angular-messages": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "angular-translate": "^2.9.2",
+    "angular-ui-router": "^0.2.18",
+    "material-design-iconic-font": "^2.2.0"
   }
 }

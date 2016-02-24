@@ -1,9 +1,26 @@
 html, 
 body, 
+main,
+header,
 footer {
+  margin: 0;
+}
+
+html, 
+body, 
+main {
   height: 100%
 }
 
+$header-color: #fff;
+$header-bg-color: #000;
+header {
+  color: $header-color;
+  background-color: $header-bg-color;
+}
+
+$footer-bg-color: #ececec;
 footer {
-  background-color: #ececec;
+  background-color: $footer-bg-color;
+  height: 100px;
 }

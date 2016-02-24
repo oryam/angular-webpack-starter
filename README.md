@@ -58,6 +58,7 @@ npm install json-loader --save-dev
 npm install style-loader --save-dev
 npm install css-loader --save-dev
 npm install sass-loader --save-dev
+npm install url-loader --save-dev
 npm install node-sass --save-dev
 
 npm install html-webpack-plugin@2 --save-dev
@@ -67,6 +68,13 @@ npm install webpack-md5-hash --save-dev
 
 npm install angular --save
 npm install angular-ui-router --save
+npm install angular-translate --save
+npm install angular-messages --save
+npm install angular-sanitize --save
+npm install angular-material --save
+npm install angular-animate --save
+npm install angular-aria --save
+npm install material-design-iconic-font --save
 ```
 
 For es6 support, add `.babelrc`

@@ -1,13 +1,21 @@
 <header ui-view="header">
-  <nav class="navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navigation</a>
-  </nav>
+  Header
 </header>
 
-<main ui-view="main">
-  Main {{vm.name}}
+<main layout flex>
+  <md-sidenav ui-view="sidenav" layout="column" flex class="md-sidenav-left md-whiteframe-z2" md-component-id="notifications">
+    Sidebar
+  </md-sidenav>
+  <div layout="column" flex>
+    <md-toolbar ui-view="toolbar" layout flex="nogrow" class="app-toolbar">
+      Toolbar
+    </md-toolbar>
+    <md-content ui-view="content" layout="column" layout-fill flex>
+      Content
+    </md-content>
+  </div>
 </main>
 
-<footer ui-view="footer">
+<footer>
   Footer
 </footer>
