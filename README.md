@@ -8,12 +8,20 @@ npm install
 npm start
 ```
 
+## Add a component
+```
+gulp component --name myComponent
+```
+
 ## TODO
-- Add webpack.prod.config.js
-- Add eslint
-- Add unit test with karma/jasmine
+- [DONE] Add angular-material
+- [DONE] Add webpack.prod.config.js
+- [DONE] Add webpack.test.config.js
+- [DONE] Add unit test with karma/jasmine
+- [DONE] Add gulp template generator
 - Add e2e test with protatractor
-- Add gulp template and server mock
+- Add gulp server mock
+- Add eslint
 - Add vscode snippets ng1
 - Create a branch with typeScript?
 - Create a branch with Webpack 2?
@@ -47,6 +55,8 @@ npm start
 ```
 
 ### From scratch
+
+**All used libraries**
 ```
 npm init
 npm install webpack --save-dev
@@ -75,8 +85,30 @@ npm install angular-material --save
 npm install angular-animate --save
 npm install angular-aria --save
 npm install material-design-iconic-font --save
+
+npm install typings --save-dev
+
+npm install karma --save-dev
+npm install karma-jasmine --save-dev
+npm install karma-webpack --save-dev
+npm install karma-sourcemap-loader --save-dev
+npm install karma-phantomjs-launcher --save-dev
+npm install karma-chrome-launcher --save-dev
+npm install karma-firefox-launcher --save-dev
+npm install karma-coverage --save-dev
+npm install karma-mocha-reporter --save-dev
+npm install istanbul-instrumenter-loader --save-dev
+npm install -g karma-cli
+npm install angular-mocks --save-dev
+npm install jasmine-core --save-dev
+
+npm install gulp --save-dev
+npm install gulp-template --save-dev
+npm install gulp-rename --save-dev
+npm install require-dir --save-dev
 ```
 
+**ES6, Babel**  
 For es6 support, add `.babelrc`
 ```
 {
@@ -95,4 +127,40 @@ Or use `query: { presets: ['es2015'] }` in your loader
 }
 ```
 
-Create or copy `webpack.config.js`
+**Webpack**  
+For webpack build, create or copy `webpack.config.js`, `webpack.prod.config.js`.
+
+**Tests**  
+For testing, create or copy `webpack.test.config.js`, `karma.conf.js`, `test.bundle.js`.  
+Install typings to fix warning messages from `.spec.js` test files.  
+Karma, Jasmine and Istanbul are used for test coverage and execution.
+
+**Template generator, Gulp**  
+Create or copy `gulp/templates/*` folders and files, `gulfile.js`.
+
+**Server mock, Gulp**  
+Create or copy `gulp/server/*` folder and files.
+
+
+
+### Typings
+To make vscode recognizes `describe`, `it`, `beforeEach` functions, use `typings`.  
+Create or copy `typings.json`.
+```
+npm install typings --global
+typings install
+```
+Refers to https://www.npmjs.com/package/typings
+
+
+Or old style with tsd
+```
+npm install -g tsd
+tsd init
+tsd install jasmine --save
+tsd install node --save
+tsd install angular --save
+```
+It creates `tsd.json` file and `typings` folder.
+For help `tsd -h`
+Refers to http://definitelytyped.org/tsd/
