@@ -11,6 +11,7 @@
     "server:dev": "webpack-dev-server --inline --progress --profile --colors --display-error-details --display-cached  --content-base src/",
     "server:prod": "http-server dist --cors",
     "server": "npm run server:dev",
+    "test": "karma start",
     "start": "npm run server:dev"
   },
   "repository": {

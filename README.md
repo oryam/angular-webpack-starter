@@ -8,7 +8,14 @@ npm install
 npm start
 ```
 
+## Test
+Tests use Karma and Jasmine.
+```
+npm run test
+```
+
 ## Add a component
+A template generator is written with a gulp task.
 ```
 gulp component --name myComponent
 ```
