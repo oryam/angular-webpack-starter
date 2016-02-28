@@ -4,8 +4,8 @@
   "description": "Angular 1.x application with Webpack",
   "main": "index.html",
   "scripts": {
-    "clean": "npm cache clean && rimraf node_modules doc coverage dist",
-    "clean:dist": "rimraf dist",
+    "clean": "npm cache clean && rimraf node_modules doc coverage dist build",
+    "clean:dist": "rimraf dist build",
     "build:dev": "webpack --progress --profile --colors --display-error-details --display-cached",
     "build:prod": "webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached",
     "server:dev": "webpack-dev-server --inline --progress --profile --colors --display-error-details --display-cached  --content-base src/",
