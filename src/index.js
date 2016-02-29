@@ -9,7 +9,7 @@ import 'angular-material/angular-material.css'
 import 'material-design-iconic-font/dist/css/material-design-iconic-font.css'
 
 import './assets/css/styles.scss';
-import appRoute from './app/app.config';
+import { appRoute } from './app/app.config';
 import appLayout from './app/layout';
 import appComponent from './app/component/app.component';
 import appFilter from './app/common/filter/app.filter';
@@ -24,4 +24,5 @@ angular.module('app', [
   appComponent,
   appFilter,
 ])
-  .config(appRoute);
+  .config(appRoute)
+  .constant('SERVICE_BASE', ENV.ROOT_SERVICE);

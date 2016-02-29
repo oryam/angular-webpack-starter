@@ -1,15 +1,14 @@
 'use strict'
 
 /**
- * npm i -D gulp gulp-template gulp-rename yargs require-dir
- * gulp component --name myComponentName
+ * npm i -D gulp json-server gulp-watch glob-promise body-parser gulp-util
+ * gulp json-server
  */
 const path = require('path')
 const gulp = require('gulp')
 const yargs = require('yargs')
 const template = require('gulp-template')
 const rename = require('gulp-rename')
-
 
 function cap(val) {
   return val.charAt(0).toUpperCase() + val.slice(1)

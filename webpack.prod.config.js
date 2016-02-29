@@ -24,6 +24,7 @@ var metadata = {
   host: HOST,
   port: PORT,
   ENV: ENV,
+  ROOT_SERVICE: 'http://localhost:9000',
 };
 
 /**

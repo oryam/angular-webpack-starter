@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "home",
+    "label": "Home page",
+    "url": "/home",
+    "open": "same"
+  },
+  {
+    "id": "2",
+    "name": "dashboard",
+    "label": "Dashboard page",
+    "url": "/dashboard",
+    "open": "same"
+  },
+  {
+    "id": "3",
+    "name": "settings",
+    "label": "Settings page",
+    "url": "/settings",
+    "open": "modal"
+  },
+  {
+    "id": "4",
+    "name": "extranet",
+    "label": "Extranet page",
+    "url": "http://google.fr",
+    "open": "window"
+  }
+]

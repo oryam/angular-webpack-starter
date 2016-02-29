@@ -1,21 +1,23 @@
 <header ui-view="header">
-  Header
+  Layout Header
 </header>
 
 <main layout flex>
-  <md-sidenav ui-view="sidenav" layout="column" flex class="md-sidenav-left md-whiteframe-z2" md-component-id="notifications">
-    Sidebar
+  <md-sidenav ui-view="sidenav" layout="column" flex class="md-sidenav-left md-whiteframe-z2" 
+    md-component-id="notifications"
+    md-is-locked-open="$mdMedia('gt-sm')">
+    <app-menu></app-menu>
   </md-sidenav>
   <div layout="column" flex>
     <md-toolbar ui-view="toolbar" layout flex="nogrow" class="app-toolbar">
-      Toolbar
+      Layout Toolbar
     </md-toolbar>
     <md-content ui-view="content" layout="column" layout-fill flex>
-      Content
+      Layout Content
     </md-content>
   </div>
 </main>
 
 <footer>
-  Footer
+  Layout Footer
 </footer>

@@ -15,9 +15,17 @@ npm run test
 ```
 
 ## Add a component
-A template generator is written with a gulp task.
+A template generator is written with a gulp task. It is located in `gulp/templates/component`.  
+@see `gulp/template-generator.js`
 ```
 gulp component --name myComponent
+```
+
+## Run json-server
+Data mock are exposed through json-server tool. All data are located in `gulp/server/data`.  
+@see `gulp/server-data.js`
+```
+gulp json-server
 ```
 
 ## TODO
@@ -113,6 +121,12 @@ npm install gulp --save-dev
 npm install gulp-template --save-dev
 npm install gulp-rename --save-dev
 npm install require-dir --save-dev
+
+npm install json-server --save-dev
+npm install gulp-watch --save-dev
+npm install glob-promise --save-dev
+npm install body-parser --save-dev
+npm install gulp-util --save-dev
 ```
 
 **ES6, Babel**  
@@ -143,11 +157,21 @@ Install typings to fix warning messages from `.spec.js` test files.
 Karma, Jasmine and Istanbul are used for test coverage and execution.
 
 **Template generator, Gulp**  
-Create or copy `gulp/templates/*` folders and files, `gulfile.js`.
+Create or copy `gulp/templates/*` folders and files, `gulpfile.js`.  
+Then to create a new component use the gulp task `component` defined in `gulp/template-generator.js`  
+@see `gulpfile.js` as entry point.
+```
+gulp component --name myComponent
+```
 
 **Server mock, Gulp**  
-Create or copy `gulp/server/*` folder and files.
-
+Create or copy `gulp/server/*` folder and files.  
+Add .json data files, then run json server with gulp task `json-server` defined in `gulp/server-data.js`
+@see `gulpfile.js` as entry point.
+```
+gulp json-server
+```
+Refers to (json-server)[https://www.npmjs.com/package/json-server]
 
 
 ### Typings

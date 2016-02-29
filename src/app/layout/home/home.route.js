@@ -6,12 +6,12 @@ export default function appLayoutHomeRoute($stateProvider) {
       parent: 'layout',
       url: '/home',
       views: {
-        sidenav: {
-          template: 'Sidenav...',
-        },
-        toolbar: {
-          template: 'Toolbar...',
-        },
+        // sidenav: {
+        //   template: 'Sidenav...',
+        // },
+        // toolbar: {
+        //   template: 'Toolbar...',
+        // },
         content: {
           template: require('./home.html'),
           controller: 'HomeController',
