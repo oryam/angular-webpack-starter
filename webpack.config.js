@@ -14,7 +14,7 @@ var metadata = {
   host: 'localhost',
   port: 3000,
   ENV: ENV,
-  ROOT_SERVICE: 'http://localhost:3001',
+  ROOT_SERVICE: 'http://localhost:3001/',
 };
 
 /**
@@ -132,6 +132,7 @@ module.exports = {
       'process.env': {
         'ENV': JSON.stringify(metadata.ENV),
         'NODE_ENV': JSON.stringify(metadata.ENV),
+        'ROOT_SERVICE': JSON.stringify(metadata.ROOT_SERVICE),
       },
     }),
   ],

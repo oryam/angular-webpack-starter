@@ -1,6 +1,6 @@
-<ul>
+<ul layout="column">
   <!-- TODO create component 'menu-item'' -->
-  <li ng-repeat="menu in vm.menus">
-    <a ng-href="menu.url">{{menu.id}}. {{menu.label}}</a>
-  </li>
+  <md-button class="md-primary md-raised side-menu-link" ng-repeat="item in vm.menu">
+    {{item.id}}. {{item.label}}
+  </md-button>
 </ul>

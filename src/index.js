@@ -25,4 +25,4 @@ angular.module('app', [
   appFilter,
 ])
   .config(appRoute)
-  .constant('SERVICE_BASE', ENV.ROOT_SERVICE);
+  .constant('SERVICE_BASE', process.env.ROOT_SERVICE);

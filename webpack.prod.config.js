@@ -24,7 +24,7 @@ var metadata = {
   host: HOST,
   port: PORT,
   ENV: ENV,
-  ROOT_SERVICE: 'http://localhost:9000',
+  ROOT_SERVICE: 'http://localhost:9000/',
 };
 
 /**
@@ -122,6 +122,7 @@ module.exports = {
       'process.env': {
         'ENV': JSON.stringify(metadata.ENV),
         'NODE_ENV': JSON.stringify(metadata.ENV),
+        'ROOT_SERVICE': JSON.stringify(metadata.ROOT_SERVICE),
       },
     }),
     new UglifyJsPlugin({

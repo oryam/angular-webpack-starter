@@ -5,8 +5,8 @@ export default class AppMenuService {
   }
 
   values() {
-    return this.$http.get(this.root + 'menu').then(function (response) {
-      console.log('root:', this.root, 'return:', response);
+    let base = this.root;
+    return this.$http.get(base + 'menu').then(function (response) {
       return response.data;
     });
   }

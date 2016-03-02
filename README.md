@@ -45,10 +45,11 @@ gulp json-server
 
 
 ## References
-- AngularJS 1.x, NodeJS, Npm, Webpack, Babel
+- AngularJS 1.x, NodeJS, Npm, Webpack, Babel, Gulp, Karma
 - [John Papa’s style guide](https://github.com/johnpapa/angular-styleguide)
 - [Angular tips](http://angular-tips.com)
 - [Preboot angular-webpack](https://github.com/preboot/angular-webpack)
+- [mockable.io](https://www.mockable.io)
 
 ## Appendix
 
@@ -107,9 +108,11 @@ npm install karma --save-dev
 npm install karma-jasmine --save-dev
 npm install karma-webpack --save-dev
 npm install karma-sourcemap-loader --save-dev
-npm install karma-phantomjs-launcher --save-dev
-npm install karma-chrome-launcher --save-dev
-npm install karma-firefox-launcher --save-dev
+npm install phantomjs-prebuilt --save-dev
+npm install karma-phantomjs2-launcher --save-dev
+#npm install karma-phantomjs-launcher --save-dev
+#npm install karma-chrome-launcher --save-dev
+#npm install karma-firefox-launcher --save-dev
 npm install karma-coverage --save-dev
 npm install karma-mocha-reporter --save-dev
 npm install istanbul-instrumenter-loader --save-dev

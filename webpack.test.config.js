@@ -7,6 +7,11 @@ var DefinePlugin = require('webpack/lib/DefinePlugin');
 
 var ENV = process.env.ENV = process.env.NODE_ENV = 'test';
 
+var metadata = {
+  ENV: ENV,
+  ROOT_SERVICE: 'http://localhost:3001/',
+};
+
 /**
  * Config
  */
@@ -108,8 +113,9 @@ module.exports = {
     new DefinePlugin({
       // Environment helpers
       'process.env': {
-        'ENV': JSON.stringify(ENV),
-        'NODE_ENV': JSON.stringify(ENV),
+        'ENV': JSON.stringify(metadata.ENV),
+        'NODE_ENV': JSON.stringify(metadata.ENV),
+        'ROOT_SERVICE': JSON.stringify(metadata.ROOT_SERVICE),
       },
     }),
   ],
