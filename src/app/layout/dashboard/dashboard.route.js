@@ -1,11 +1,11 @@
 /**
  * @ngInject
  */
-export default function appLayoutHomeRoute($stateProvider) {
+export default function appLayoutDashboardRoute($stateProvider) {
   $stateProvider
-    .state('home', {
+    .state('dashboard', {
       parent: 'layout',
-      url: '/home',
+      url: '/dashboard',
       views: {
         // sidenav: {
         //   template: 'Sidenav...',
@@ -14,8 +14,8 @@ export default function appLayoutHomeRoute($stateProvider) {
         //   template: 'Toolbar...',
         // },
         content: {
-          template: require('./home.html'),
-          controller: 'AppHomeController',
+          template: require('./dashboard.html'),
+          controller: 'AppDashboardController',
           controllerAs: 'vm',
         },
       },

@@ -12,5 +12,5 @@ export default angular.module('app.layout.home', [
   appHello,
 ])
   .config(appLayoutHomeRoute)
-  .controller('HomeController', AppLayoutHomeController)
+  .controller('AppHomeController', AppLayoutHomeController)
   .name;

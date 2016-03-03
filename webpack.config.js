@@ -58,10 +58,10 @@ module.exports = {
     ],
 
     loaders: [
-      // transpiling JavaScript files using Babel
+      // transpiling JavaScript files using Babel and ngAnnotate
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loaders: ['ng-annotate', 'babel-loader'],
         exclude: /node_modules/,
       },
       

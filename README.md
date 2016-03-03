@@ -102,6 +102,9 @@ npm install angular-animate --save
 npm install angular-aria --save
 npm install material-design-iconic-font --save
 
+npm install ng-annotate --save-dev
+npm install ng-annotate-loader --save-dev
+
 npm install typings --save-dev
 
 npm install karma --save-dev
@@ -174,7 +177,11 @@ Add .json data files, then run json server with gulp task `json-server` defined 
 ```
 gulp json-server
 ```
-Refers to (json-server)[https://www.npmjs.com/package/json-server]
+Refers to [json-server](https://www.npmjs.com/package/json-server)
+
+
+**Dependency injection**  
+`ng-annotate` is used for automatic dependency injection. With webpack, `ng-annotate-loader` is added.
 
 
 ### Typings
@@ -184,7 +191,7 @@ Create or copy `typings.json`.
 npm install typings --global
 typings install
 ```
-Refers to https://www.npmjs.com/package/typings
+Refers to [typings](https://www.npmjs.com/package/typings)
 
 
 Or old style with tsd
@@ -195,6 +202,6 @@ tsd install jasmine --save
 tsd install node --save
 tsd install angular --save
 ```
-It creates `tsd.json` file and `typings` folder.
-For help `tsd -h`
-Refers to http://definitelytyped.org/tsd/
+It creates `tsd.json` file and `typings` folder.  
+For help `tsd -h`  
+Refers to [tsd](http://definitelytyped.org/tsd/)

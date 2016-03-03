@@ -3,13 +3,14 @@
 </header>
 
 <main layout flex>
-  <md-sidenav ui-view="sidenav" layout="column" flex class="md-sidenav-left md-whiteframe-z2" 
-    md-component-id="menu-left"
-    md-is-locked-open="$mdMedia('gt-xs')">
+  <md-sidenav ui-view="sidenav" layout="column" flex class="md-sidenav-left md-whiteframe-z2" md-component-id="menu-left"  md-is-locked-open="$mdMedia('gt-sm')">
     <app-menu></app-menu>
   </md-sidenav>
   <div layout="column" flex>
     <md-toolbar ui-view="toolbar" layout flex="nogrow" class="app-toolbar">
+      <md-button hide-gt-sm ng-click="vm.toggleSidenav('menu-left')" class="md-icon-button" aria-label="Settings">
+        <md-icon md-font-icon="zmdi zmdi-menu zmdi-hc-lg"></md-icon>
+      </md-button>
       Layout Toolbar
     </md-toolbar>
     <md-content ui-view="content" layout="column" layout-fill flex>

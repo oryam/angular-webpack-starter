@@ -39,7 +39,7 @@ module.exports = {
       // transpiling JavaScript files using Babel
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loaders: ['ng-annotate', 'babel-loader'],
         exclude: [
           /node_modules/,
           /\.e2e\.js$/,

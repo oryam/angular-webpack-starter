@@ -1,5 +1,6 @@
-appLayoutRoute.$inject = ['$stateProvider'];
-
+/**
+ * @ngInject
+ */
 export default function appLayoutRoute($stateProvider) {
   $stateProvider
     .state('layout', {

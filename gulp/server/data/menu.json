@@ -3,21 +3,19 @@
     "id": "1",
     "name": "home",
     "label": "Home page",
-    "url": "/home",
-    "open": "same"
+    "state": "home"
   },
   {
     "id": "2",
     "name": "dashboard",
     "label": "Dashboard page",
-    "url": "/dashboard",
-    "open": "same"
+    "state": "dashboard"
   },
   {
     "id": "3",
     "name": "settings",
     "label": "Settings page",
-    "url": "/settings",
+    "state": "settings",
     "open": "modal"
   },
   {

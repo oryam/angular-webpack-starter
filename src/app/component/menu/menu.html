@@ -1,6 +1,9 @@
-<ul layout="column">
+<div layout="column" ng-repeat="item in vm.menu">
   <!-- TODO create component 'menu-item'' -->
-  <md-button class="md-primary md-raised side-menu-link" ng-repeat="item in vm.menu">
-    {{item.id}}. {{item.label}}
+  <md-button class="md-primary md-raised side-menu-link" ng-if="item.state" ng-click="vm.goto(item)">
+    {{item.label}}
   </md-button>
-</ul>
+  <md-button class="md-primary md-raised side-menu-link" ng-if="item.open==='window'" ng-href="{{item.url}}" target="_blank">
+    {{item.label}}
+  </md-button>
+</div>

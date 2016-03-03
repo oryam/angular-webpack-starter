@@ -1,4 +1,7 @@
 export default class AppMenuService {
+  /**
+   * @ngInject
+   */
   constructor($http, SERVICE_BASE) {
     this.$http = $http;
     this.root = SERVICE_BASE;
@@ -6,10 +9,8 @@ export default class AppMenuService {
 
   values() {
     let base = this.root;
-    return this.$http.get(base + 'menu').then(function (response) {
+    return this.$http.get(`${base}menu`).then(function (response) {
       return response.data;
     });
   }
 }
-
-AppMenuService.$inject = ['$http', 'SERVICE_BASE'];
