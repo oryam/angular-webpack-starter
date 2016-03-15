@@ -36,6 +36,7 @@ gulp json-server
 - [DONE] Add gulp template generator
 - Add e2e test with protatractor
 - Add gulp server mock
+- Use https://github.com/gstroup/apimocker instead json-server?
 - Add eslint
 - Add vscode snippets ng1
 - Create a branch with typeScript?

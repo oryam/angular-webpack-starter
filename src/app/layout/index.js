@@ -8,11 +8,13 @@ import AppLayoutController from './layout.controller';
 
 import appLayoutHome from './home';
 import appLayoutDashboard from './dashboard';
+import appComponent from '../component/app.component';
 
 export default angular.module('app.layout', [
   uirouter,
   appLayoutHome,
   appLayoutDashboard,
+  appComponent,
 ])
   .config(appLayoutRoute)
   .controller('AppLayoutController', AppLayoutController)

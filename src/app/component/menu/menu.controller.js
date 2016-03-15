@@ -2,17 +2,11 @@ export default class AppMenuController {
   /**
    * @ngInject
    */
-  constructor($state, $mdToast, AppMenuService) {
+  constructor($state, $mdToast, AppMenu) {
     this.$state = $state;
     this.$mdToast = $mdToast;
-    this.menuService = AppMenuService;
     this.name = 'AppMenu component';
-    this.menu = [];
-    this.loadMenu();
-  }
-
-  loadMenu() {
-    this.menuService.values().then(values => this.menu = values);
+    this.menu = AppMenu.items;
   }
 
   goto(item) {
@@ -24,7 +18,7 @@ export default class AppMenuController {
           .textContent('Error: page not available!')
           .position('bottom right')
           .hideDelay(3000)
-        );
+      );
     }
   }
 }
