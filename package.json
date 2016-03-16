@@ -12,6 +12,8 @@
     "server:prod": "http-server dist --cors",
     "server": "npm run server:dev",
     "test": "karma start",
+    "e2e": "protractor protractor.config.js",
+    "e2e:live": "protractor protractor.config.js --elementExplorer",
     "start": "npm run server:dev"
   },
   "repository": {
@@ -59,6 +61,7 @@
     "ng-annotate": "^1.2.1",
     "ng-annotate-loader": "^0.1.0",
     "node-sass": "^3.4.2",
+    "protractor": "^3.1.1",
     "raw-loader": "^0.5.1",
     "require-dir": "^0.3.0",
     "sass-loader": "^3.1.2",

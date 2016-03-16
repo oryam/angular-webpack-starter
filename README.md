@@ -13,6 +13,11 @@ Tests use Karma and Jasmine.
 ```
 npm run test
 ```
+End-to-end tests use Protractor.
+```
+npm run e2e
+```
+
 
 ## Add a component
 A template generator is written with a gulp task. It is located in `gulp/templates/component`.  
@@ -34,9 +39,9 @@ gulp json-server
 - [DONE] Add webpack.test.config.js
 - [DONE] Add unit test with karma/jasmine
 - [DONE] Add gulp template generator
-- Add e2e test with protatractor
-- Add gulp server mock
-- Use https://github.com/gstroup/apimocker instead json-server?
+- [DONE] Add e2e test with protatractor
+- [DONE] Add gulp server mock with json-server
+- Use [apimocker](https://github.com/gstroup/apimocker) instead of json-server?
 - Add eslint
 - Add vscode snippets ng1
 - Create a branch with typeScript?
@@ -63,7 +68,7 @@ gulp json-server
 - Install gulp
 - Install karma
 - Install protractor
-- Install http-server `npm install http-server -g`
+- Install http-server
 
 Then
 ```
@@ -124,6 +129,8 @@ npm install -g karma-cli
 npm install angular-mocks --save-dev
 npm install jasmine-core --save-dev
 
+npm install protractor --save-dev
+
 npm install gulp --save-dev
 npm install gulp-template --save-dev
 npm install gulp-rename --save-dev
@@ -159,9 +166,10 @@ Or use `query: { presets: ['es2015'] }` in your loader
 For webpack build, create or copy `webpack.config.js`, `webpack.prod.config.js`.
 
 **Tests**  
-For testing, create or copy `webpack.test.config.js`, `karma.conf.js`, `test.bundle.js`.  
+For testing, create or copy `webpack.test.config.js`, `karma.conf.js`, `test.bundle.js`, `protractor.config.js`.  
 Install typings to fix warning messages from `.spec.js` test files.  
-Karma, Jasmine and Istanbul are used for test coverage and execution.
+Karma, Jasmine and Istanbul are used for test coverage and execution.  
+Protractor is used for end-to-end tests.
 
 **Template generator, Gulp**  
 Create or copy `gulp/templates/*` folders and files, `gulpfile.js`.  
@@ -183,6 +191,25 @@ Refers to [json-server](https://www.npmjs.com/package/json-server)
 
 **Dependency injection**  
 `ng-annotate` is used for automatic dependency injection. With webpack, `ng-annotate-loader` is added.
+
+**Protractor**
+Install protractor globally
+```
+npm install -g protractor
+webdriver-manager update
+protractor protractor.config.js
+```
+Or install it locally
+```
+npm install protractor --save-dev
+npm run e2e
+```
+You might need to install web drivers manually with webdriver-manager inside `./node_modules/protractor/bin`
+```
+./node_modules/protractor/bin/webdriver-manager update
+```
+Or download drivers (chromedriver.exe, chromedriver_\*.zip, selenium-server-standalone-\*.jar) manually inside `./node_modules/protractor/selenium` 
+(tip: do the install globally, to get the web drivers in npm global folder, then copy them).
 
 
 ### Typings

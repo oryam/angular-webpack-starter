@@ -1,3 +1,8 @@
+
+const appConfig = angular.module('app.config', [])
+  .constant('SERVICE_BASE', process.env.ROOT_SERVICE)
+  .name;
+
 /**
  * @ngInject
  */
@@ -8,5 +13,6 @@ function appRoute($urlRouterProvider, $locationProvider) {
 
 // example of export notation without 'export default...'
 export {
-  appRoute,
+appRoute,
+appConfig,
 }
